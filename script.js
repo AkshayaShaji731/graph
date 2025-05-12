@@ -27,6 +27,8 @@ function graphOutline() {
     }
     xAxis = x;
     yAxis = y
+    document.querySelector(".label-x").innerHTML = "Enter the x-axis"
+    document.querySelector(".label-y").innerHTML = "Enter the y-axis"
     document.querySelector(".max-x").value = ""
     document.querySelector(".max-y").value = ""
     drawBtn.removeEventListener("click", graphOutline)
@@ -79,9 +81,11 @@ function creategraph() {
     }
 }
 function reset() {
+    document.querySelector(".label-x").innerHTML = "Enter the No.of rows"
+    document.querySelector(".label-y").innerHTML = "Enter the No.of Column"
     document.querySelector(".max-x").value = ""
     document.querySelector(".max-y").value = ""
-    container.innerHTML=""
+    container.innerHTML = ""
     drawBtn.removeEventListener("click", clearGraph)
     drawBtn.className = "draw"
     drawBtn.innerHTML = "Draw"
